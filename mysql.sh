@@ -3,7 +3,7 @@
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
-Y="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 LOGS_FOLDER="/var/log/expense-log"
@@ -29,12 +29,12 @@ CHECK_ROOT(){
     fi
 }
  
- mkdir /var/log/expense-log 
+ 
 echo "Script executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 CHECK_ROOT
 
-mkdir /var/log/expense-log 
+
 
 dnf install mysql-server -y &>>$LOG_FILE_NAME
 VALIDATE $? "Installing MySQL Server"
