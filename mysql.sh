@@ -28,7 +28,8 @@ CHECK_ROOT(){
       exit 1
     fi
 }
-
+ 
+ mkdir /var/log/expense-log 
 echo "Script executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 CHECK_ROOT
