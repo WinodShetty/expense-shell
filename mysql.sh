@@ -54,4 +54,4 @@ if [ $? -ne 0 ]
     VALIDATE $? "Setting root password"
 else
     echo -e "MySQL root password already setup ... $Y SKIPPING $N"
-fi
+fi 
