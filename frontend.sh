@@ -30,3 +30,6 @@ CHECK_ROOT(){
 }
 
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
+mkdir -p $LOGS_FOLDER
+echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
