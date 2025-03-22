@@ -33,3 +33,12 @@ echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 mkdir -p $LOGS_FOLDER
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
+dnf install nginx -y  &>>$LOG_FILE_NAME
+VALIDATE $? "Installing Nginx Server"
+
+systemctl enable nginx &>>$LOG_FILE_NAME
+VALIDATE $? "Enabling Nginx server"
+
+systemctl start nginx &>>$LOG_FILE_NAME
+VALIDATE $? "Starting Nginx Server"
