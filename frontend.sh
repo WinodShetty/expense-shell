@@ -42,3 +42,6 @@ VALIDATE $? "Enabling Nginx server"
 
 systemctl start nginx &>>$LOG_FILE_NAME
 VALIDATE $? "Starting Nginx Server"
+
+rm -rf /usr/share/nginx/html/* &>>$LOG_FILE_NAME
+VALIDATE $? "Removing existing version of code"
