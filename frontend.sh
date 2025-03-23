@@ -51,3 +51,6 @@ VALIDATE $? "Downloading Latest code"
 
 cd /usr/share/nginx/html
 VALIDATE $? "Moving to HTML directory"
+
+unzip /tmp/frontend.zip &>>$LOG_FILE_NAME
+VALIDATE $? "unzipping the frontend code"
